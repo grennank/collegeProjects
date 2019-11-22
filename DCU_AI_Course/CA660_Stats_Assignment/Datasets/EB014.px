@@ -1,0 +1,90 @@
+CHARSET="ANSI";
+AXIS-VERSION="2000";
+LANGUAGE="en";
+CREATION-DATE="20171215 11:05";
+DECIMALS=1;
+SHOWDECIMALS=0;
+MATRIX="EB014";
+SUBJECT-AREA="";
+SUBJECT-CODE="DB";
+TITLE="Labour Force Participation and Unemployment Rate of Population Aged 15"
+"Years and Over Usually Resident and Present in the State 2011 to 2016"
+"by Sex, Nationality, CensusYear and Statistic";
+CONTENTS="Labour Force Participation and Unemployment Rate of Population Aged 15 Years and Over Usually Resident and Present in the State 2011 to 2016";
+UNITS="Number";
+STUB="Sex","Nationality";
+HEADING="CensusYear","Statistic";
+CONTVARIABLE="Statistic";
+VALUES("Sex")="Both sexes","Male","Female";
+VALUES("Nationality")="Irish","Irish-American","Irish-Other","UK","Austrian","Belgian","Danish","Finnish","French","German",
+"Greek","Italian","Luxembourger","Dutch","Portuguese","Spanish","Swedish","Cypriot","Czech","Estonian","Irish-UK",
+"Hungarian","Latvian","Lithuanian","Maltese","Polish","Slovak","Slovenian","Bulgarian","Romanian","Croatian","Russian",
+"Ukrainian","Moldovan","Turk","Belarusian","Bosnian and Herzegovinian","Norwegian","Serbian","Swiss","Nigerian",
+"South African","Mauritian","Algerian","Congolese","Egyptian","Ghanaian","Somali","Sudanese","Zimbabwean","Angolan",
+"Cameroonian","Ethiopian","Kenyan","Libyan","Malawian","Moroccan","Batswana","Indian","Filipino","Chinese","Pakistani",
+"Malaysian","Bangladeshi","Iraqi","Saudi","Thai","Georgian","Iranian","Israeli","Japanese","South Korean","Kuwaiti",
+"Mongolian","Nepalese","Omani","Singaporean","Sri Lankan","Syrian","Taiwanese","Vietnamese","American (US)",
+"Brazilian","Canadian","Argentine","Chilean","Colombian","Mexican","Venezuelan","Afghan","Australian","New Zealander",
+"Multi nationality","No nationality","Not stated","Irish-Belarusian","Irish-Bosnian","Irish-Bulgarian",
+"Irish-Croatian","Irish-Czech","Irish-Finnish","Irish-French","Irish-German","Irish-Hungarian","Irish-Italian",
+"Irish-Latvian","Irish-Lithuanian","Irish-Dutch","Irish-Polish","Irish-Portuguese","Irish-Romanian",
+"Irish-Slovakian","Irish-Spanish","Irish-Swedish","Irish-Other European","Irish-Algerian","Irish-Congolese",
+"Irish-Egyptian","Irish-Libyan","Irish-Nigerian","Irish-South African","Irish-Sudanese","Irish-Zimbabwean",
+"Irish-Other African","Irish-Chinese","Irish-Indian","Irish-Iranian","Irish-Iraqi","Irish-Japanese",
+"Irish-Malaysian","Irish-Pakistani","Irish-Filipino","Irish-Thai","Irish-Vietnamese","Irish-Other Asian",
+"Irish-Brazilian","Irish-Canadian","Irish-Mexican","Irish-Other American","Irish-Australian","Irish-New Zealander",
+"Other European","Other African","Other Asian","Other American","Other nationalities","Kosovan","All nationalities";
+VALUES("CensusYear")="2011","2016";
+VALUES("Statistic")="Total Persons Aged 15 Years and Over (Number)","At work (Number)","Unemployed including looking for first regular job (Number)",
+"Not in labour force including not stated (Number)","Labour force participation rate (Rate)",
+"Unemployment rate (Rate)";
+CODES("Sex")="-","1","2";
+CODES("Nationality")="IE","IE02","IE04","GB","AT","BE","DK","FI","FR","DE","GR","IT","LU","NL","PT","ES","SE","CY","CZ","EE","IEUK","HU","LV","LT","MT","PL","SK","SI","BG","RO","HR","RU",
+"UA","MD","TR","BY","BA","NO","RS","CH","NG","ZA","MU","DZ","CDCG","EG","GH","SO","SD","ZW","AO","CM","ET","KE","LY","MW","MA","BW","IN","PH","CN","PK","MY","BD","IQ","SA","TH","GE","IR","IL","JP","KR",
+"KW","MN","NP","OM","SG","LK","SY","TW","VN","US","BR","CA","AR","CL","CO","MX","VE","AF","AU","NZ","ZZ10","ZZ30","ZZ98","IEBY","IEBA","IEBG","IEHR","IECZ","IEFI","IEFR","IEDE",
+"IEHU","IEIT","IELv","IELT","IENL","IEPL","IEPT","IERO","IESK","IEES","IESE","IEOEUR00","IEDZ","IECG","IEEG","IELY","IENG","IEZA","IESD","IEZW",
+"IEOAFR00","IECN","IEIN","IEIR","IEIQ","IEJP","IEMY","IEPK","IEPH","IETH","IEVN","IEOAS00","IEBR","IECA","IEMX","IEOAM00","IEAU","IENZ",
+"OEUR00","OAFR00","OAS00","OAM00","ON00","QO","-";
+CODES("Statistic")="EB014C01","EB014C02","EB014C03","EB014C04","EB014C05","EB014C06";
+DOMAIN("Sex")="C02199V02655";
+DOMAIN("Nationality")="C02537V03240";
+PRECISION("Statistic","Labour force participation rate (Rate)")=1;
+PRECISION("Statistic","Unemployment rate (Rate)")=1;
+LAST-UPDATED("Total Persons Aged 15 Years and Over (Number)")="20171214 11:04";
+LAST-UPDATED("At work (Number)")="20171214 11:04";
+LAST-UPDATED("Unemployed including looking for first regular job (Number)")="20171214 11:04";
+LAST-UPDATED("Not in labour force including not stated (Number)")="20171214 11:04";
+LAST-UPDATED("Labour force participation rate (Rate)")="20171214 11:04";
+LAST-UPDATED("Unemployment rate (Rate)")="20171214 11:04";
+UNITS("Total Persons Aged 15 Years and Over (Number)")="Number";
+UNITS("At work (Number)")="Number";
+UNITS("Unemployed including looking for first regular job (Number)")="Number";
+UNITS("Not in labour force including not stated (Number)")="Number";
+UNITS("Labour force participation rate (Rate)")="Rate";
+UNITS("Unemployment rate (Rate)")="Rate";
+SOURCE="Central Statistics Office, Ireland";
+DATABASE="CSO Databank";
+REFPERIOD("Total Persons Aged 15 Years and Over (Number)")=" ";
+REFPERIOD("At work (Number)")=" ";
+REFPERIOD("Unemployed including looking for first regular job (Number)")=" ";
+REFPERIOD("Not in labour force including not stated (Number)")=" ";
+REFPERIOD("Labour force participation rate (Rate)")=" ";
+REFPERIOD("Unemployment rate (Rate)")=" ";
+BASEPERIOD("Total Persons Aged 15 Years and Over (Number)")=" ";
+BASEPERIOD("At work (Number)")=" ";
+BASEPERIOD("Unemployed including looking for first regular job (Number)")=" ";
+BASEPERIOD("Not in labour force including not stated (Number)")=" ";
+BASEPERIOD("Labour force participation rate (Rate)")=" ";
+BASEPERIOD("Unemployment rate (Rate)")=" ";
+INFOFILE="DB_E11";
+NOTEX="The majority of respondents from both the <i>Democratic Republic of the Congo</"
+"i> and the <i>Republic of the Congo</i> indicated that they were born in <i>Con"
+"go</i>. With this information alone it was impossible to distinguish which of t"
+"he two countries the person was in fact from.#The labour force participation ra"
+"te is calculated by expressing the labour force (i.e. those at work, looking fo"
+"r first regular job and unemployed) as a percentage of the total aged 15 years "
+"and over.";
+DATA=
+3013233.0 1476627.0 335446.0 1201160.0 60.1 18.5 3095900.0 1610343.0 230570.0 1254987.0 59.5 12.5 
+10208.0 4697.0 760.0 4751.0 53.5 13.9 13220.0 6307.0 663.0 6250.0 52.7 9.5 
+10811.0 6223.0 103
