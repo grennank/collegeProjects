@@ -3,12 +3,13 @@ library(pxR)
 library(reshape2)
 library(dplyr)
 library(data.table)
-filename <- "EB005.px"
+filename <- "Datasets/EB005.px"
 
 # load px file as data frame
-data <- as.data.frame(read.px("EP007_Housing.px"))
+data <- as.data.frame(read.px(filename))
 attach(data)
 names(data)
+
 # make it wide format (requires reshape2 package)
 data_wide <- dcast(data, Principal.Economic.Status~Sex+Nationality+CensusYear, value.var = 'value')
 # then remove 

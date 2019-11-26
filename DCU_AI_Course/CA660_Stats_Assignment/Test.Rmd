@@ -1,0 +1,254 @@
+---
+title: "Untitled"
+author: "KieranG"
+date: "11/25/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+  
+  ### Introduction.
+  
+  This is very rough and ready experimentation with rendering shapefiles via R flexdashboard templates.
+
+
+```{r}
+if(!require(sp)){ # the classes and methods that make up spatial ops in R
+  install.packages("sp")
+  library(sp)
+}
+
+if(!require(maptools)){ # tools for reading and manipulating spatial objects
+  install.packages("maptools")
+  library(maptools)
+}
+
+if(!require(mapdata)){ # includes good vector maps of world political boundaries.
+  install.packages("mapdata")
+  library(maptdata)
+}
+
+if(!require(rgdal)){ # includes good vector maps of world political boundaries.
+  install.packages("rgdal")
+  library(rgdal)
+}
+
+if(!require(RColorBrewer)){ 
+  install.packages("RColorBrewer")
+  library(RColorBrewer)
+}
+
+if(!require(dplyr)){ 
+  install.packages("dplyr")
+  library(dplyr)
+}
+
+if(!require(tidyverse)){
+  install.packages("tidyverse")
+  suppressPackageStartupMessages(library(tidyverse))
+}
+
+if(!require(leaflet)){
+  install.packages("leaflet")
+  suppressPackageStartupMessages(library(leaflet))
+}
+
+```
+
+*** 
+  
+  Introduction text.
+
+### Frame 2 {data-commentary-width=400}
+
+```{r}
+shape <- rgdal::readOGR("Datasets/Census2011_Admin_Counties_generalised20m.shp", verbose = FALSE)
+plot(shape)
+```
+
+*** 
+  
+  Some commentary about Frame 2.
+
+### Shapefile - Irish Counties with Statistic. {data-commentary-width=400}
+
+```{r}
+# shape    <- maptools::readShapePoly("Datasets/Census2011_Admin_Counties_generalised20m.shp")
+shape    <- rgdal::readOGR("Datasets/Census2011_Admin_Counties_generalised20m.shp", verbose = FALSE)
+counties <- read.csv("Datasets\\counties.csv")
+shape$COUNTY <- as.numeric(shape$COUNTY)
+counties$county <- as.numeric(counties$COUNTY)
+shape2 <- merge(shape, counties, by.x="COUNTY", by.y="COUNTYNAME")
+sp::spplot(shape2,"TOTAL2011") 
+sp::spplot(shape2,"province_numeric")
+```
+
+*** 
+  
+  Some commentary about Frame XXX.
+
+### Shapefile - Irish Counties coloured by palette {data-commentary-width=400}
+
+```{r}
+countyPalette = c("#7FFFD4"  ,	 #01	Limerick_City	# munster
+                  "#F0FFFF"	,	 #02	Limerick_County	# munster
+                  "#FFE4C4"	,	 #03	North_Tipperary	# munster 
+                  "#0000FF"	,	 #04	South_Tipperary	# munster  
+                  "#FF4040"	,	 #05	Waterford_City	# munster
+                  "#FFD39B"	,	 #06	Waterford_County	# munster
+                  "#98F5FF"	,	 #07	Galway_City	# Connacht
+                  "#7FFF00"	,	 #08	Galway_County	# Connacht
+                  "#FF7F24"	,	 #09	Leitrim_County	# Connacht
+                  "#FF7256"	,	 #10	Mayo_County	# Connacht
+                  "#FFF8DC"	,	 #11	Roscommon_County	# Connacht
+                  "#00FFFF"	,	 #12	Sligo_County	# Connacht
+                  "#CAFF70"	,	 #13	Cavan_County	# Ulster
+                  "#FF7F00"	,	 #14	Donegal_County	# Ulster
+                  "#CC0000"	,	 #15	Monaghan_County	# Ulster
+                  "#C1FFC1"	,	 #16	Carlow_County	# leinster
+                  "#97FFFF"	,	 #17	Dublin_City	# leinster
+                  "#FF1493"	,	 #18	South_Dublin	# leinster
+                  "#00BFFF"	,	 #19	Fingal	# leinster
+                  "#1E90FF"	,	 #20	Dun_Laoghaire_Rathdown	# leinster
+                  "#FF3030"	,	 #21	Kildare_County	# leinster
+                  "#FFD700"	,	 #22	Kilkenny_County	# leinster
+                  "#FFC125"	,	 #23	Laois_County	# leinster
+                  "#00FF00"	,	 #24	Longford_County	# leinster
+                  "#030303"	,	 #25	Louth_County	# leinster
+                  "#FF6EB4"	,	 #26	Meath_County	# leinster
+                  "#FF6A6A"	,	 #27	Offaly_County	# leinster
+                  "#FFFFF0"	,	 #28	Westmeath_County	# leinster
+                  "#FFF0F5"	,	 #29	Wexford_County	# leinster
+                  "#FFFACD"	,	 #30	Wicklow_County	# leinster
+                  "#BFEFFF"	,	 #31	Clare_County	# munster
+                  "#FF0000"	,	 #32	Cork_City	# munster
+                  "#FF0000",	 #33	Cork_County	# munster
+                  "#E066FF"		#34	Kerry_County	# munster
+)				
+
+shape    <- rgdal::readOGR("Datasets/Census2011_Admin_Counties_generalised20m.shp", verbose = FALSE)
+plot(shape, col = countyPalette)
+```
+
+*** 
+  
+  Some commentary about Frame XXX.
+
+### Frame XXX {data-commentary-width=400}
+
+```{r}
+leaflet() %>%
+  setView(lat = 53.35, lng = -6.25, zoom=14) %>%
+  addTiles(group="OSM") %>%
+  addProviderTiles(providers$CartoDB.DarkMatter, group="Dark") %>%
+  addProviderTiles(providers$CartoDB.Positron, group="Light") %>%
+  addLayersControl(baseGroups=c('OSM', 'Dark','Light'))
+
+```
+
+*** 
+  
+  Some commentary about Frame XXX.
+
+### Ireland Counties - Leaflet, basic.  {data-commentary-width=400}
+
+```{r}
+irl_counties_100m <- geojsonio::geojson_read("../../data/cso/ea840344ad9245f2b19a1f967394ff5a_0.geojson", what = "sp")
+
+pal <- colorNumeric("viridis", NULL)
+
+leaflet(irl_counties_100m) %>%
+  addTiles() %>%
+  addPolygons(color = "black", 
+              stroke = TRUE, 
+              smoothFactor = 0.3, 
+              fillOpacity = 1,
+              fillColor = "white",
+              weight = 1,
+              label = ~paste0(COUNTY))
+
+
+```
+
+*** 
+  
+  Some commentary about Frame XXX.
+
+### Ireland Provinces from Shapefile via sf  {data-commentary-width=200}
+
+```{r}
+shape <- sf::st_read("../../data/cso/2016/Admin_Counties_Generalised_50m/Admin_Counties_Generalised_50m.shp", quiet=TRUE)
+
+plot(shape[6])
+```
+
+*** 
+  
+  Some commentary about Frame XXX.
+
+### Ireland Shapefile via sf  {data-commentary-width=200}
+
+```{r}
+plot(shape)
+```
+
+*** 
+  
+  Some commentary about Frame XXX.
+
+
+### Constituencies (2013) from Shapefile via plot. {data-commentary-width=400}
+
+```{r}
+constituencies <- sf::st_read("../../data/cso/Constituency_Boundaries__Generalised_20m__OSi_National_Statuatory_Boundaries_.shp", quiet=TRUE)
+plot(constituencies)
+```
+
+*** 
+  
+  Some commentary about Frame XXX.
+
+### Constituencies from Shapefile via Leaflet. {data-commentary-width=400}
+
+```{r}
+constituencies <- sf::st_read("../../data/cso/Constituency_Boundaries__Generalised_20m__OSi_National_Statuatory_Boundaries_.shp", quiet=TRUE)
+
+# tibble::glimpse(constituencies)
+
+pal <- colorNumeric("viridis", NULL)
+
+leaflet(constituencies) %>%
+  addTiles() %>%
+  addPolygons(color = "black", 
+              stroke = TRUE, 
+              smoothFactor = 0.3, 
+              fillOpacity = 1,
+              fillColor = "white",
+              weight = 1,
+              label = ~paste0(MAX_CON_NA))
+
+```
+
+*** 
+  
+  Some commentary about Frame XXX.
+
+### Frame XXX {data-commentary-width=400}
+
+```{r}
+```
+
+*** 
+  
+  Some commentary about Frame XXX.
+
+### Frame XXX {data-commentary-width=400}
+
+```{r}
+```
+
+*** 
+  
+  Some commentary about Frame XXX.

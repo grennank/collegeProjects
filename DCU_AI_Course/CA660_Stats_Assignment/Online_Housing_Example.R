@@ -14,7 +14,7 @@ register_google(key = "AIzaSyDcloJoYiwGVrTl14Rmed3O2oYxZmo4TBs")
 
 # read the shape file
 spdf <- readOGR(dsn  = 
-  "Census2011_Admin_Counties_generalised20m.shp")
+  "Datasets/Census2011_Admin_Counties_generalised20m.shp")
 
 # make it ggplot-friendly
 spdf@data$id <- rownames(spdf@data)
@@ -51,7 +51,7 @@ names(counties)
 ggplot(counties) + geom_polygon(colour="black", aes(x=long, y=lat, group=group, fill=TOTAL2011))
 
 # load px file as data frame
-ep007 <- as.data.frame(read.px("EP007_Housing.px"))
+ep007 <- as.data.frame(read.px("Datasets/EP007_Housing.px"))
 # make it wide format (requires reshape2 package)
 ep007_wide <- dcast(ep007, Province.County.or.City~Statistic, value.var = 'value')
 # then remove non-admin counties aggregates: counties, state, provinces#

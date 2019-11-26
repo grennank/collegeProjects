@@ -1,0 +1,1129 @@
+CHARSET="ANSI";
+AXIS-VERSION="2000";
+LANGUAGE="en";
+CREATION-DATE="20190620 11:02";
+DECIMALS=0;
+SHOWDECIMALS=0;
+MATRIX="IIA13";
+SUBJECT-AREA="";
+SUBJECT-CODE="DB";
+TITLE="Median Earned Income (Euro) by Sex, Detailed Occupational Group and Year";
+CONTENTS="Median Earned Income (Euro)";
+UNITS="Euro";
+STUB="Sex","Detailed Occupational Group";
+HEADING="Year";
+VALUES("Sex")="Both sexes","Male","Female";
+VALUES("Detailed Occupational Group")="Actors, entertainers and presenters (incl. Dancers and choreographers and Musicians)",
+"Aircraft maintenance and related trades","Finance and investment analysts and advisers",
+"Finance officers","Financial accounts managers","Financial administrative occupations n.e.c.",
+"Financial and accounting technicians","Financial institution managers and directors","Financial managers and directors",
+"Fire service officers (watch manager and below)","Fishing and other elementary agriculture occupations n.e.c.",
+"Fishmongers and poultry dressers","Aircraft pilots and flight engineers (incl. Air traffic controllers)",
+"Fitness instructors","Floorers and wall tilers","Florists","Food, drink and tobacco process operatives",
+"Footwear and leather working trades","Forestry workers","Fork-lift truck drivers","Functional managers and directors n.e.c.",
+"Furniture makers and other craft woodworkers","Further and higher education teaching professionals",
+"Animal care services occupations n.e.c.","Garage managers and proprietors","Gardeners and landscape gardeners",
+"Glass and ceramics makers, decorators and finishers (incl. Glass and ceramics process operatives)",
+"Glaziers, window fabricators and fitters","Graphic designers (incl. Product, clothing and related designers)",
+"Groundsmen and greenkeepers","Hairdressers and related services (incl. Hairdressing and beauty salon managers and proprietors)",
+"Health and safety officers","Health associate professionals n.e.c.","Health care practice managers",
+"Architects and town planners (incl. Quantity surveyors and Chartered surveyors)","Health professionals n.e.c.",
+"Health services and public health managers and directors","Horticultural trades","Hospital porters",
+"Hotel and accommodation managers and proprietors","Housekeepers and related occupations",
+"Houseparents and residential wardens","Housing officers","Human resource managers and directors",
+"Human resources administrative occupations","Architectural and town planning technicians (incl. Draughtspersons)",
+"Human resources and industrial relations officers","Importers and exporters","Industrial cleaning process occupations",
+"Information technology and telecommunications directors","Inspectors of standards and regulations",
+"Insurance underwriters","IT and telecommunications professionals n.e.c.","IT business analysts, architects and systems designers",
+"IT engineers","IT operations technicians","Artists","IT project and programme managers","IT specialist managers",
+"IT user support technicians","Journalists, newspaper and periodical editors","Kitchen and catering assistants",
+"Laboratory technicians","Large goods vehicle drivers","Launderers, dry cleaners and pressers",
+"Legal associate professionals","Legal professionals n.e.c.","Arts officers, producers and directors",
+"Leisure and sports managers","Leisure and theme park attendants","Leisure and travel service occupations n.e.c.",
+"Librarians (incl. Archivists and curators)","Local government administrative occupations",
+"Management consultants and business analysts","Managers and directors in retail and wholesale",
+"Managers and directors in storage and warehousing","Managers and directors in transport and distribution",
+"Managers and proprietors in agriculture and horticulture","Assemblers (electrical and electronic products)",
+"Managers and proprietors in forestry, fishing and related services","Managers and proprietors in horse-racing and related industries",
+"Managers and proprietors in other services n.e.c. (incl. Production managers and directors in mining and energy)",
+"Marine and waterways transport operatives","Market and street traders and assistants",
+"Market research interviewers","Marketing and sales directors","Marketing associate professionals",
+"Mechanical engineers","Medical and dental technicians (incl. Dental nurses)","Assemblers (vehicles and metal goods) (incl. Assemblers and routine operatives n.e.c.)",
+"Medical practitioners","Medical radiographers","Merchandisers and window dressers","Metal machining setters and setter-operators",
+"Metal making and treating process operatives","Metal working machine operatives","Metal working production and maintenance fitters",
+"Mobile machine drivers and operatives n.e.c.","Moulders, core makers and die casters",
+"National government administrative occupations","Authors, writers and translators","Natural and social science professionals n.e.c.",
+"NCOs and other ranks in armed forces","Nursery nurses and assistants and playworkers (incl. playgroup leaders)",
+"Nursing and midwifery professionals","Nursing auxiliaries and assistants (incl. Ambulance staff (excl. paramedics))",
+"Occupational therapists","Office managers","Office supervisors","Officers in armed forces","Officers of non-governmental organisations",
+"Actuaries, economists and statisticians (incl. Business and related research professionals)",
+"Bakers and flour confectioners","Opticians","Other administrative occupations n.e.c. (incl. Records clerks and assistants, Library clerks and assistants and Typists and related keyboard occupations)",
+"Other drivers and transport operatives n.e.c.","Other elementary services occupations n.e.c.",
+"Other skilled trades n.e.c.","Packers, bottlers, canners and fillers","Painters and decorators",
+"Paper and wood machine operatives","Paramedics","Parking and civil enforcement occupations",
+"Bank and post office clerks","Pensions and insurance clerks and assistants","Pest control officers",
+"Pharmaceutical technicians","Pharmacists","Pharmacy and other dispensing assistants","Photographers, audio-visual and broadcasting equipment operators",
+"Physical scientists","Physiotherapists","Pipe fitters","Planning, process and production technicians",
+"Bar staff","Plant and machine operatives n.e.c. (incl. Process operatives n.e.c.)","Plasterers",
+"Plastics process operatives","Plumbers and heating and ventilating engineers","Podiatrists",
+"Police officers (sergeant and below)","Postal workers, mail sorters, messengers and couriers",
+"Precision instrument makers and repairers","Primary and nursery education teaching professionals",
+"Print finishing and binding workers","Barristers and judges (incl. Solicitors)","Printers (incl. Pre-press technicians and Printing machine assistants)",
+"Prison service officers (below principal officer)","Probation officers","Production and process engineers",
+"Production managers and directors in construction","Production managers and directors in manufacturing",
+"Programmers and software development professionals","Protective service associate professionals n.e.c.",
+"Psychologists","Public relations professionals","Biological scientists and biochemists","Public services associate professionals",
+"Publicans and managers of licensed premises","Purchasing managers and directors","Quality assurance and regulatory professionals",
+"Quality assurance technicians","Quality control and planning engineers","Quarry workers and related operatives",
+"Rail and rolling stock builders and repairers","Rail construction and maintenance operatives",
+"Rail transport operatives","Boat and ship builders and repairers","Rail travel assistants",
+"Refuse and salvage occupations","Research and development managers","Residential, day and domiciliary care managers and proprietors",
+"Restaurant and catering establishment managers and proprietors","Road construction operatives",
+"Roofers, roof tilers and slaters","Roundspersons and van salespersons","Routine inspectors and testers",
+"Rubber process operatives","Book-keepers, payroll managers and wages clerks","Sales accounts and business development managers",
+"Sales administrators","Sales and retail assistants, cashiers and checkout operators (incl. Shelf fillers)",
+"Sales related occupations n.e.c. (incl. Estimators, valuers and assessors and Collector salespersons and credit agents)",
+"Sales supervisors","School midday and crossing patrol occupations","Science, engineering and production technicians n.e.c.",
+"Secondary education teaching professionals","Secretarial and related occupations","Security guards and related occupations",
+"Bricklayers and masons","Senior care workers","Senior police officers","Senior professionals of educational establishments",
+"Sewing machinists","Sheet metal workers","Ship and hovercraft officers","Shopkeepers and proprietors – wholesale and retail",
+"Skilled metal, electrical and electronic trades supervisors","Skilled workers in horse-racing and related industries",
+"Smiths and forge workers (incl. Metal plate workers, and riveters)","Brokers","Social and humanities scientists",
+"Social services managers and directors","Social workers","Speech and language therapists",
+"Sports and leisure assistants","Sports coaches, instructors and officials","Sports players",
+"Stock control clerks and assistants","Street cleaners","Tailors and dressmakers","Building and civil engineering technicians (incl. Engineering technicians)",
+"Taxi and cab drivers and chauffeurs","Teaching assistants","Teaching, special needs, and other educational professionals n.e.c.",
+"Telecommunications engineers","Telephone salespersons","Telephonists","Textile process operatives",
+"Textiles, garments and related trades n.e.c.","Therapy professionals n.e.c.","Tool makers, tool fitters and markers-out",
+"Advertising accounts managers and creative directors","Bus and coach drivers","Train and tram drivers",
+"Transport and distribution clerks and assistants","Travel agency managers and proprietors",
+"Travel agents","TV, video and audio engineers","Undertakers, mortuary and crematorium assistants",
+"Upholsterers","Van drivers","Vehicle and parts salespersons and advisers","Vehicle body builders and repairers (incl. Vehicle paint technicians)",
+"Business and financial project management professionals","Vehicle technicians, mechanics and electricians (incl. Tyre, exhaust and windscreen fitters)",
+"Vehicle valeters and cleaners","Veterinarians","Veterinary nurses","Vocational and industrial trainers and instructors",
+"Waiters and waitresses","Waste disposal and environmental services managers","Water and sewerage plant operatives",
+"Weavers and knitters","Web design and development professionals","Business and related associate professionals n.e.c.",
+"Weighers, graders and sorters","Welding trades (incl. Steel erectors)","Welfare and housing associate professionals n.e.c.",
+"Welfare professionals n.e.c.","Window cleaners","Youth and community workers","Business sales executives",
+"Business, research and administrative professionals n.e.c.","Butchers","Buyers and procurement officers",
+"Call and contact centre occupations","Care escorts","Care workers and home carers","Advertising and public relations directors",
+"Careers advisers and vocational guidance specialists","Caretakers","Carpenters and joiners",
+"Catering and bar managers","Chartered and certified accountants and taxation experts",
+"Chartered architectural technologists","Chefs","Chemical and related process operatives",
+"Chemical scientists","Chief executives","Agricultural and fishing trades n.e.c.","Child and early years officers",
+"Childminders and related occupations","Civil and public service AP, PO and equivalent grades (incl. Senior officers in fire, ambulance, prison and related services)",
+"Civil and public service Assistant Secretary and above and senior officials","Civil engineers",
+"Cleaners and domestics","Cleaning and housekeeping managers and supervisors","Clergy","Coal mine operatives",
+"Communication operators","Agricultural machinery drivers","Conference and exhibition managers and organisers",
+"Conservation and environmental associate professionals","Conservation professionals","Construction and building trades n.e.c.",
+"Construction and building trades supervisors","Construction operatives n.e.c. (incl. Scaffolders, stagers and riggers)",
+"Construction project managers and related professionals","Cooks","Counsellors","Crane drivers",
+"Air transport operatives","Credit controllers","Customer service managers and supervisors",
+"Customer service occupations n.e.c.","Debt, rent and other cash collectors","Dental practitioners",
+"Design and development engineers","Driving instructors","Education advisers and school inspectors",
+"Educational support assistants","Elected officers and representatives","Air travel assistants",
+"Electrical and electronic trades n.e.c.","Electrical and electronics technicians","Electrical engineers (incl. Electronics engineers)",
+"Electricians and electrical fitters","Electroplaters","Elementary administration occupations n.e.c.",
+"Elementary cleaning occupations n.e.c.","Elementary construction occupations","Elementary occupations in horse-racing and related industries",
+"Elementary process plant occupations n.e.c.","Air-conditioning and refrigeration engineers",
+"Elementary sales occupations n.e.c.","Elementary security occupations n.e.c.","Elementary storage occupations",
+"Energy plant operatives","Engineering professionals n.e.c.","Environment professionals","Environmental health professionals",
+"Estate agents and auctioneers","Farm workers","Farmers";
+VALUES("Year")="2016";
+TIMEVAL("Year")=TLIST(A1),"2016";
+CODES("Sex")="-","1","2";
+CODES("Detailed Occupational Group")="1","10","100","101","102","103","104","105","106","107","108","109","11","110","111","112","113","114","115","116",
+"117","118","119","12","120","121","122","123","124","125","126","127","128","129","13","130","131","132","133","134","135","136","137","138","139","14","140","141",
+"142","143","144","145","146","147","148","149","15","150","151","152","153","154","155","156","157","158","159","16","160","161","162","163","164","165","166","167",
+"168","169","17","170","171","172","173","174","175","176","177","178","179","18","180","181","182","183","184","185","186","187","188","189","19","190","191","192",
+"193","194","195","196","197","198","199","2","20","200","201","202","203","204","205","206","207","208","209","21","210","211","212","213","214","215","216","217","218",
+"219","22","220","221","222","223","224","225","226","227","228","229","23","230","231","232","233","234","235","236","237","238","239","24","240","241","242","243",
+"244","245","246","247","248","249","25","250","251","252","253","254","255","256","257","258","259","26","260","261","262","263","264","265","266","267","268","269",
+"27","270","271","272","273","274","275","276","277","278","279","28","280","281","282","283","284","285","286","287","288","289","29","290","291","292","293","294",
+"295","296","297","298","299","3","30","300","301","302","303","304","305","306","307","308","309","31","310","311","312","313","314","315","316","317","318","319","32",
+"320","321","322","323","324","325","33","34","35","36","37","38","39","4","40","41","42","43","44","45","46","47","48","49","5","50","51","52","53","54","55","56","57","58","59","6","60","61","62",
+"63","64","65","66","67","68","69","7","70","71","72","73","74","75","76","77","78","79","8","80","81","82","83","84","85","86","87","88","89","9","90","91","92","93","94","95","96","97","98","99";
+DOMAIN("Sex")="C02199V02655";
+DOMAIN("Detailed Occupational Group")="C03534V04262";
+LAST-UPDATED="20190620 10:05";
+SOURCE="Central Statistics Office, Ireland";
+DATABASE="CSO Databank";
+REFPERIOD=" ";
+BASEPERIOD=" ";
+INFOFILE="DB_III";
+DATA=
+13488 
+47262 
+43233 
+57318 
+48910 
+27098 
+27270 
+68642 
+76854 
+51825 
+20449 
+22312 
+92381 
+13529 
+18829 
+12531 
+23604 
+17609 
+24604 
+27342 
+49323 
+20729 
+62759 
+13902 
+33625 
+17702 
+24428 
+25014 
+26661 
+24845 
+13515 
+38797 
+12031 
+33496 
+44919 
+42734 
+64768 
+19991 
+36714 
+26000 
+14550 
+35595 
+40468 
+61833 
+29291 
+36037 
+36994 
+33000 
+18856 
+91472 
+52352 
+41493 
+56091 
+55975 
+47251 
+43254 
+11930 
+69723 
+74588 
+34850 
+36179 
+15915 
+36509 
+28631 
+16986 
+37053 
+64775 
+31381 
+29628 
+14732 
+17776 
+39346 
+36076 
+51833 
+30231 
+37421 
+46106 
+31200 
+25870 
+32013 
+32805 
+39238 
+30701 
+9768 
+16899 
+80000 
+31532 
+48317 
+25599 
+29849 
+90018 
+55226 
+18902 
+34392 
+30579 
+29117 
+38661 
+27791 
+34237 
+34907 
+23879 
+44516 
+37971 
+17013 
+43685 
+28722 
+41951 
+32756 
+36673 
+59217 
+43046 
+41401 
+20949 
+36998 
+26742 
+35927 
+16875 
+24162 
+22340 
+16803 
+24948 
+59984 
+24837 
+33309 
+33478 
+30000 
+29225 
+57740 
+18976 
+21585 
+59533 
+41503 
+40683 
+51172 
+15270 
+25747 
+17147 
+28141 
+26208 
+25215 
+62127 
+37872 
+41656 
+43803 
+27241 
+64002 
+29685 
+65255 
+57908 
+62002 
+47126 
+55350 
+55481 
+40261 
+50671 
+36096 
+50523 
+52428 
+24277 
+59047 
+61162 
+40400 
+50937 
+38246 
+54599 
+46410 
+46448 
+31297 
+45955 
+23058 
+63528 
+36545 
+23622 
+33390 
+26324 
+24789 
+36549 
+26125 
+26910 
+55508 
+27277 
+16749 
+32987 
+22754 
+7606 
+49502 
+49473 
+42006 
+26172 
+18886 
+26497 
+85619 
+69455 
+14379 
+31431 
+48753 
+22891 
+45200 
+19357 
+19736 
+43167 
+24896 
+51038 
+45047 
+42017 
+18317 
+16318 
+22220 
+30357 
+19613 
+12350 
+45841 
+12529 
+11971 
+22508 
+44934 
+22650 
+19505 
+20715 
+19671 
+18477 
+37158 
+48661 
+27834 
+53895 
+32657 
+39062 
+25481 
+26000 
+33009 
+17888 
+23820 
+30800 
+21348 
+61059 
+24031 
+18499 
+52700 
+23404 
+37199 
+12823 
+40142 
+41708 
+22952 
+31465 
+40904 
+27311 
+28455 
+34305 
+33736 
+13344 
+33610 
+34855 
+60434 
+24176 
+42375 
+20040 
+11126 
+22840 
+70211 
+40233 
+20803 
+22484 
+26425 
+46492 
+34975 
+21585 
+37445 
+51397 
+91367 
+24931 
+19062 
+13257 
+72295 
+73739 
+49844 
+12171 
+22290 
+21222 
+75390 
+31163 
+20993 
+27719 
+39890 
+37907 
+23598 
+42020 
+26294 
+54993 
+14060 
+30407 
+41970 
+32177 
+30519 
+35280 
+24388 
+27774 
+80095 
+47083 
+15113 
+43020 
+29720 
+12156 
+28358 
+38659 
+48547 
+51511 
+34450 
+30367 
+19345 
+31030 
+26322 
+24493 
+23934 
+36645 
+33023 
+23077 
+25583 
+47432 
+55162 
+44262 
+53888 
+32014 
+19133 
+19536 
+14199 
+47383 
+47224 
+107191 
+59553 
+29860 
+32049 
+77656 
+94500 
+51828 
+22900 
+23524 
+96334 
+16030 
+18800 
+23080 
+25741 
+18860 
+24894 
+27301 
+55496 
+21079 
+69386 
+19083 
+33923 
+17945 
+25929 
+25123 
+29958 
+24945 
+17011 
+40769 
+15766 
+55000 
+46990 
+48831 
+71956 
+21361 
+37011 
+29584 
+18487 
+36377 
+46284 
+76090 
+29878 
+37300 
+38725 
+34699 
+22789 
+96492 
+52598 
+48349 
+58623 
+59069 
+47516 
+45367 
+16994 
+74000 
+78755 
+35500 
+40267 
+17097 
+39916 
+28665 
+19456 
+45433 
+82224 
+32182 
+31803 
+16318 
+17806 
+44193 
+42744 
+54426 
+33651 
+37735 
+47370 
+31600 
+27864 
+38503 
+35717 
+42566 
+31082 
+11383 
+21086 
+84533 
+33175 
+48280 
+38373 
+31203 
+109785 
+65326 
+21708 
+34635 
+32219 
+30001 
+39165 
+27801 
+35439 
+38069 
+25642 
+48760 
+37934 
+22069 
+53563 
+31832 
+55513 
+41268 
+40730 
+60874 
+53047 
+47034 
+24565 
+44083 
+32152 
+38369 
+18083 
+26373 
+24636 
+16864 
+25597 
+62351 
+25830 
+38838 
+37640 
+30034 
+56104 
+68676 
+24905 
+23192 
+62787 
+44514 
+40683 
+53879 
+17389 
+27059 
+17150 
+29320 
+26210 
+36412 
+63433 
+38894 
+43302 
+44976 
+31461 
+78010 
+31766 
+65975 
+57674 
+63418 
+48354 
+58442 
+58000 
+40780 
+54879 
+38176 
+53318 
+54362 
+26587 
+64148 
+67706 
+41565 
+52603 
+38272 
+56198 
+46468 
+46773 
+31200 
+46470 
+23242 
+74683 
+49899 
+25480 
+33420 
+26337 
+25032 
+39579 
+26107 
+33150 
+59483 
+29583 
+19788 
+35374 
+27704 
+7661 
+50989 
+51407 
+49942 
+26232 
+18908 
+27346 
+85755 
+72340 
+23992 
+31457 
+49030 
+25898 
+47301 
+21013 
+20190 
+50910 
+25135 
+54146 
+46885 
+39126 
+19497 
+18962 
+23001 
+31265 
+19613 
+17718 
+47087 
+12587 
+19716 
+21727 
+45130 
+24040 
+23472 
+24486 
+19843 
+25468 
+37206 
+56244 
+28714 
+53936 
+34042 
+43314 
+30000 
+25922 
+35254 
+19406 
+23930 
+31099 
+21320 
+67432 
+24047 
+18550 
+66169 
+24564 
+40201 
+15684 
+40153 
+41708 
+26092 
+32000 
+44870 
+29777 
+28481 
+31361 
+".." 
+13401 
+34880 
+36475 
+71980 
+24417 
+43979 
+20433 
+11899 
+28986 
+77500 
+43379 
+22305 
+22495 
+28004 
+51504 
+35943 
+22937 
+42120 
+54524 
+100641 
+25052 
+".." 
+17699 
+74183 
+75961 
+50000 
+19040 
+25905 
+20499 
+75390 
+31282 
+21066 
+27737 
+40553 
+41328 
+23567 
+42124 
+26337 
+55748 
+17318 
+37594 
+41970 
+32848 
+33387 
+38292 
+25853 
+30034 
+103143 
+48405 
+15950 
+46546 
+27603 
+15601 
+28826 
+38695 
+49250 
+51496 
+34529 
+30384 
+".." 
+31030 
+26265 
+26277 
+25980 
+36671 
+33706 
+28982 
+26124 
+47240 
+57359 
+45453 
+57466 
+33800 
+19487 
+20016 
+12031 
+41269 
+39726 
+41974 
+41788 
+26020 
+26333 
+61013 
+60126 
+51206 
+18664 
+18126 
+68234 
+11668 
+20550 
+12027 
+19597 
+7842 
+16752 
+29108 
+41620 
+13208 
+55008 
+11877 
+26763 
+14271 
+18342 
+21377 
+23833 
+20015 
+13179 
+35720 
+11025 
+32165 
+38416 
+42127 
+63806 
+17609 
+30738 
+23095 
+14303 
+32889 
+35431 
+58255 
+29206 
+31333 
+36462 
+28113 
+12531 
+69594 
+51656 
+37271 
+47199 
+48338 
+42784 
+37131 
+8743 
+62633 
+62838 
+32861 
+31968 
+15124 
+34624 
+22035 
+15524 
+35197 
+55099 
+30945 
+26400 
+12812 
+17741 
+37509 
+35183 
+49228 
+26462 
+35666 
+38885 
+26938 
+24190 
+16100 
+25174 
+33412 
+10753 
+7321 
+13720 
+71559 
+30651 
+49000 
+24517 
+27555 
+75212 
+53388 
+16965 
+29127 
+".." 
+21820 
+27554 
+25336 
+25337 
+33426 
+22959 
+41644 
+38446 
+16923 
+42877 
+27547 
+40527 
+30999 
+32372 
+55763 
+38559 
+36037 
+15956 
+34922 
+25557 
+28062 
+14384 
+15484 
+19696 
+12805 
+19051 
+49927 
+15062 
+31262 
+31636 
+29707 
+26129 
+52570 
+18627 
+17087 
+54607 
+40814 
+".." 
+40495 
+11475 
+20403 
+".." 
+24454 
+25641 
+22345 
+58489 
+30380 
+26431 
+43654 
+19946 
+55702 
+22004 
+61888 
+57962 
+58630 
+34009 
+41600 
+44654 
+38433 
+49948 
+35600 
+49285 
+49272 
+19565 
+51368 
+55794 
+39710 
+49309 
+".." 
+".." 
+".." 
+33041 
+".." 
+".." 
+18742 
+53241 
+33791 
+21640 
+30249 
+".." 
+14455 
+32206 
+27106 
+25926 
+48686 
+26821 
+15532 
+30488 
+20958 
+7588 
+45337 
+48806 
+41686 
+25292 
+18044 
+26036 
+83176 
+68406 
+12926 
+22497 
+42333 
+17354 
+35105 
+13455 
+".." 
+34537 
+24305 
+49235 
+44799 
+42063 
+16779 
+12973 
+15213 
+27971 
+".." 
+11112 
+36639 
+10687 
+11626 
+22907 
+39561 
+21975 
+18363 
+17773 
+19555 
+16909 
+".." 
+43689 
+17759 
+38966 
+30674 
+37400 
+24315 
+27833 
+27177 
+13989 
+16732 
+24969 
+".." 
+53493 
+22681 
+15710 
+39230 
+23318 
+34376 
+12149 
+38225 
+42050 
+15467 
+30000 
+37016 
+23569 
+24590 
+35451 
+".." 
+9804 
+33196 
+29870 
+46411 
+18689 
+40610 
+19637 
+11082 
+21842 
+64637 
+38813 
+11032 
+19265 
+22939 
+42416 
+30931 
+19010 
+31990 
+47910 
+71034 
+15920 
+18726 
+13220 
+68283 
+72801 
+46055 
+10764 
+20024 
+33405 
+".." 
+30449 
+".." 
+27706 
+37484 
+35000 
+32449 
+32365 
+24092 
+42648 
+13369 
+26331 
+".." 
+29013 
+29884 
+33322 
+23509 
+25112 
+67905 
+41000 
+10006 
+41374 
+29787 
+8737 
+28197 
+35256 
+30270 
+52189 
+25052 
+".." 
+".." 
+".." 
+28519 
+16840 
+19017 
+31776 
+".." 
+18987 
+19991 
+57465 
+46552 
+42180 
+50880 
+29999 
+16196 
+13858 
