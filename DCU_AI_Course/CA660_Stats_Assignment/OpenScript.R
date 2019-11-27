@@ -1,14 +1,21 @@
+setwd("C:/collegeProjects/DCU_AI_Course/CA660_Stats_Assignment")
+install.packages("gmodels")
 install.packages("ggplot2")
+install.packages("GoodmanKruskal")
 library(pxR)
 library(ggplot2)
 library(dplyr)
+library(gmodels)
+library(GoodmanKruskal)
 
 migration <- as.data.frame(read.px("Datasets/PEA03.px"))
 population <- as.data.frame(read.px("Datasets/PEA01.px"))
+
+  
 years <- seq(1983,2014,1)
 rates <- c(14.00 , 15.60 , 16.90 , 17.00 , 16.80 , 16.10 , 14.60 , 13.20 , 14.60 , 15.20 , 15.50 , 14.00 , 12.10, 11.50 , 10.30 ,  7.40 ,  5.50 ,  4.30 ,  3.90 ,  4.40 ,  4.60 ,  4.50 ,  4.40 ,  4.50 ,  4.70 ,  6.40 ,  12.00 ,  13.80 ,  14.60 , 14.70 , 13.10 ,  11.20)
 unemployment <- data.frame(years, rates)
-population
+#population
 my.population <- population[(population$Age.Group=="All ages")&(population$Sex=="Both sexes")&(as.numeric(as.character(population$Year)) > 1982)&(as.numeric(as.character(population$Year)) < 2015),]
 
 my.population65 <- population[(population$Age.Group=="65 years and over")&(population$Sex=="Both sexes")&(as.numeric(as.character(population$Year)) > 1982)&(as.numeric(as.character(population$Year)) < 2015),]
@@ -27,9 +34,11 @@ unemployment$Total <- unemployment$Population.labour*unemployment$rates*10
 
 levels(population$Age.Group)
 
-plot(x=unemployment$years, y= unemployment$migration)
+plot(x=unemployment$years, y= unemployment$Total)
+
 ggplot(data=unemployment, aes(x=unemployment$years, y= unemployment$Population)) +
   geom_line()
+
 ggplot(data=unemployment, aes(x=unemployment$years, y= unemployment$rates)) +
   geom_line()
 
@@ -39,6 +48,7 @@ my.migration$Year.num <- as.numeric(as.character(my.migration$Year))
 my.migration$Pop <- my.population[(as.numeric(as.character(my.population$Year)) > 1986),]
 
 unemployment$migration <- c(NA,NA,NA,NA,my.migration$value*1000)
+
 ggplot(data=my.migration, aes(x=my.migration$Year.num, y= my.migration$value)) + geom_line()
                            
 ggplot(data=unemployment, aes(x=unemployment$years,y=unemployment$migration)) + geom_line()
@@ -62,4 +72,92 @@ ggplot(data=unemployment_1987, aes(x=unemployment_1987$migration, y = unemployme
 #method="lm", formula = unemployment_1987$Total.Labour ~ unemployment_1987$migration        
 ggplot(data=unemployment_1987, aes(x=unemployment_1987$migration, y = unemployment_1987$Total)) + geom_point() + geom_smooth(method="lm", formula = y~x)
 
+
+monthly_umeploy <- as.data.frame(read.px("Datasets/MUM01.px"))
+mon_unemploy_tots <- monthly_umeploy[(monthly_umeploy$Statistic == "Seasonally Adjusted Monthly Unemployment (Thousand)"),]
+
+plot_munemploy <- ggplot(monthly_umeploy, aes(monthly_umeploy$Month, monthly_umeploy$value))
+
+plot_munemploy + geom_point(aes(colour = factor(monthly_umeploy$Age.Group))) 
+plot_munemploy + geom_point(aes(colour = factor(monthly_umeploy$Sex))) 
+
+ #geom_text(aes(label = monthly_umeploy$Age.Group))
+
+#Boxplot of Nonzero Unemployment by Age Group
+ggplot(mapping = aes(x = monthly_umeploy$Age.Group, y = monthly_umeploy$value),
+       data = subset(monthly_umeploy, monthly_umeploy$value > 0)) + 
+  geom_boxplot() + stat_summary(fun.y = mean,
+                                geom = 'point', 
+                                shape = 19,
+                                color = "red",
+                                cex = 2) +
+  labs(x = "Age Groups", 
+       y = "Unemployment (thousands)") +
+  ggtitle("Nonzero Unemployment by Age Group") 
+
+ggplot(data = monthly_umeploy, aes(monthly_umeploy$value, fill = monthly_umeploy$Sex)) + 
+  geom_density(alpha = 0.2) 
+
+as.numeric(monthly_umeploy$Sex)
+ggplot(data = monthly_umeploy, aes(monthly_umeploy$value, fill = monthly_umeploy$Age.Group)) + 
+  geom_density(alpha = 0.2) 
+
+#CrossTable(monthly_umeploy$Sex, monthly_umeploy$value, 
+#           prop.chisq = TRUE,
+#           chisq = TRUE)
+
+#CrossTable(population$Year, population$value, 
+#           prop.chisq = TRUE,
+#           chisq = TRUE)
+chisq.test(population$Year, population$value)
+
+chisq.test(population$Age.Group, population$value)
+#Men 
   
+unemploy_combined
+
+#Women
+
+# Persons on the Live Register by Sex, Duration, Month and Age Group (
+live_reg_mon_dur <- as.data.frame(read.px("Datasets/LRM11.px"))
+plot_munemp_dur <- ggplot(live_reg_mon_dur, aes(live_reg_mon_dur$Month, live_reg_mon_dur$value))
+plot_munemp_dur + geom_point(aes(colour = factor(live_reg_mon_dur$Duration))) 
+
+# Persons on the Live Register by Month, Sex, Age Group and Statistic (1967M01-2019M10) 
+live_reg_mon_stat <- as.data.frame(read.px("Datasets/LRM02.px"))
+
+
+names(population)
+
+population$Year <- as.factor(population$Year)
+population$Age.Group <- as.factor(population$Age.Group)
+population$Sex <- as.factor(population$Sex)
+
+covariates <- paste("Year", "Sex", "Age.Group", sep = "+")
+form <- as.formula(paste("value ~", covariates))
+  
+glm.model <- glm(formula = form,
+                 data = population, 
+                 family = binomial(link = "logit"),
+                 x = TRUE)
+classification_model <- glm(as.factor(population$value) 
+                            ~as.factor(population$Sex) 
+                              , data = 
+                              population, family = binomial(link = "logit"))
+# The option "x=TRUE" returns the design matrix
+
+summary(classification_model)$coefficients[, 1:2]
+
+GKmatrix <- GKtauDataframe(population[, c("Year", "Sex", "Age.Group")])
+plot(GKmatrix)
+
+## Splitting training and test
+## 75% of the sample size
+smp_size <- floor(0.75 * nrow(population))
+
+## set the seed to make your partition reproducible
+set.seed(123)
+train_ind <- sample(seq_len(nrow(population)), size = smp_size)
+
+train <- population[train_ind, ]
+test <- population[-train_ind, ]
