@@ -1,4 +1,6 @@
-setwd("C:/collegeProjects/DCU_AI_Course/CA660_Stats_Assignment")
+#setwd("C:/collegeProjects/DCU_AI_Course/CA660_Stats_Assignment")
+# setwd("~/Documents/GitProjects/collegeProjects/DCU_AI_Course/CA660_Stats_Assignment")
+
 install.packages("gmodels")
 install.packages("ggplot2")
 install.packages("GoodmanKruskal")
@@ -161,3 +163,70 @@ train_ind <- sample(seq_len(nrow(population)), size = smp_size)
 
 train <- population[train_ind, ]
 test <- population[-train_ind, ]
+
+#SVM dataset setup
+rm(SVM_df)
+SVM_df$Sex <- NA
+SVM_df$Duration <- NULL
+SVM_df = data.frame()
+
+# if Number <= 50 Size is small, 
+# if Number is between 50 and 70, Size is Medium
+# if Number is Bigger than 70, Size is Big
+liv_reg_mod_dur_v2 <- live_reg_mon_dur[(live_reg_mon_dur$Duration != "All durations") 
+                                       & (live_reg_mon_dur$Sex != "Both sexes")
+                                       & (live_reg_mon_dur$Age.Group != "All ages")
+                                       & (live_reg_mon_dur$Age.Group != "Under 20 years")
+                                       & (live_reg_mon_dur$Age.Group != "20 - 24 years")
+                                       & (live_reg_mon_dur$Age.Group != "25 years and over"),]
+levels(liv_reg_mod_dur_v2$Age.Group)
+levels(liv_reg_mod_dur_v2$Duration)
+
+liv_reg_mod_dur_v2$Dur <- ifelse(liv_reg_mod_dur_v2$Duration == "Less than one year", 0, ifelse(liv_reg_mod_dur_v2$Duration == "One year or more", 1, NA))
+
+liv_reg_mod_dur_v2$Age <- ifelse(liv_reg_mod_dur_v2$Age.Group == "Under 25 years", 0,
+     ifelse(liv_reg_mod_dur_v2$Age.Group == "25 - 34 years", 1, 
+            ifelse(liv_reg_mod_dur_v2$Age.Group == "35 - 44 years", 2,
+                   ifelse(liv_reg_mod_dur_v2$Age.Group == "45 - 54 years", 3,
+                          ifelse(liv_reg_mod_dur_v2$Age.Group == "55 - 59 years", 4,
+                                 ifelse(liv_reg_mod_dur_v2$Age.Group == "60 - 64 years", 5,NA))))))
+
+
+install.packages('caTools') 
+library(caTools) 
+
+set.seed(123) 
+liv_reg_mod_dur_SVM = liv_reg_mod_dur_v2[5:7] 
+liv_reg_mod_dur_SVM$value = as.numeric(as.factor(liv_reg_mod_dur_SVM$value))
+liv_reg_mod_dur_SVM$Age = as.numeric(as.factor(liv_reg_mod_dur_SVM$Age))
+liv_reg_mod_dur_SVM$Dur = as.numeric(as.factor(liv_reg_mod_dur_SVM$Dur))
+
+split = sample.split(liv_reg_mod_dur_SVM$value, SplitRatio = 0.75) 
+
+training_set = subset(liv_reg_mod_dur_SVM, split == TRUE) 
+test_set = subset(liv_reg_mod_dur_SVM, split == FALSE) 
+
+# Feature Scaling 
+training_set[-3] = scale(training_set[-3]) 
+test_set[-3] = scale(test_set[-3]) 
+
+install.packages('e1071') 
+library(e1071) 
+
+Sys.setenv('R_MAX_VSIZE'=32000000000)
+Sys.getenv('R_MAX_VSIZE')
+usethis::edit_r_environ()
+classifier = svm(formula = value ~ ., 
+                 data = liv_reg_mod_dur_SVM, 
+                 type = 'C-classification', 
+                 kernel = 'linear') 
+
+y_pred = predict(classifier, newdata = test_set[-3]) 
+
+
+
+
+
+
+
+

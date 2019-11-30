@@ -65,9 +65,9 @@ ep007_wide_admin$Province.County.or.City <- factor(factor_rename_counties_long(e
 # strange errors on merge with factors, so forcing to string
 counties$COUNTYNAME <- as.vector(counties$COUNTYNAME)
 ep007_wide_admin$Province.County.or.City <- as.vector(ep007_wide_admin$Province.County.or.City)
-# encoding problem with the 'ú' so overwriting for consistency
-counties$COUNTYNAME[counties$COUNTYNAME == "D\xfan Laoghaire-Rathdown"] <- "Dún Laoghaire-Rathdown"
-ep007_wide_admin$Province.County.or.City[ep007_wide_admin$Province.County.or.City == "Dún Laoghaire-Rathdown"] <- "Dún Laoghaire-Rathdown"
+# encoding problem with the '?' so overwriting for consistency
+counties$COUNTYNAME[counties$COUNTYNAME == "D\xfan Laoghaire-Rathdown"] <- "D?n Laoghaire-Rathdown"
+ep007_wide_admin$Province.County.or.City[ep007_wide_admin$Province.County.or.City == "D?n Laoghaire-Rathdown"] <- "D?n Laoghaire-Rathdown"
 
 # check available data column names
 colnames(ep007_wide_admin)
