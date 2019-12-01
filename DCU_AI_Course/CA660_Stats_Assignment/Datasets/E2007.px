@@ -1,0 +1,80 @@
+CHARSET="ANSI";
+AXIS-VERSION="2000";
+LANGUAGE="en";
+CREATION-DATE="20170511 11:03";
+DECIMALS=1;
+SHOWDECIMALS=0;
+MATRIX="E2007";
+SUBJECT-AREA="";
+SUBJECT-CODE="DB";
+TITLE="Components of Population Change and Average Annual Rates 2011 to 2016"
+"by Sex, County and City, CensusYear and Statistic";
+CONTENTS="Components of Population Change and Average Annual Rates 2011 to 2016";
+UNITS="Number";
+STUB="Sex","County and City";
+HEADING="CensusYear","Statistic";
+CONTVARIABLE="Statistic";
+VALUES("Sex")="Both sexes","Male","Female";
+VALUES("County and City")="State","Carlow","Dublin City","Dún Laoghaire-Rathdown","Fingal","South Dublin","Kildare",
+"Kilkenny","Laois","Longford","Louth","Meath","Offaly","Westmeath","Wexford","Wicklow","Clare","Cork City","Cork County",
+"Kerry","Limerick City and County","Tipperary","Waterford City and County","Galway City","Galway County",
+"Leitrim","Mayo","Roscommon","Sligo","Cavan","Donegal","Monaghan";
+VALUES("CensusYear")="2011","2016";
+VALUES("Statistic")="Change in Population since previous census (Number)","Births (Number)","Deaths (Number)",
+"Natural increase (Number)","Estimated net migration (Number)","Average annual rates per 1,000 - Births (Number)",
+"Average annual rates per 1,000 - Deaths (Number)","Average annual rates per 1,000 - Natural increase (Number)",
+"Average annual rates per 1,000 - Estimated net migration (Number)";
+CODES("Sex")="-","1","2";
+CODES("County and City")="IE","CW","DC","DR","FL","SD","KE","KK","LS","LD","LH","MH","OY","WH","WX","WW","CE","CC","CK","KY","LK","TY","WD","GC","GY","LM","MO","RN","SO","CN","DL","MN";
+CODES("Statistic")="E2007C01","E2007C02","E2007C03","E2007C04","E2007C05","E2007C06","E2007C07","E2007C08","E2007C09";
+DOMAIN("Sex")="C02199V02655";
+DOMAIN("County and City")="C03367V04052";
+PRECISION("Statistic","Average annual rates per 1,000 - Births (Number)")=1;
+PRECISION("Statistic","Average annual rates per 1,000 - Deaths (Number)")=1;
+PRECISION("Statistic","Average annual rates per 1,000 - Natural increase (Number)")=1;
+PRECISION("Statistic","Average annual rates per 1,000 - Estimated net migration (Number)")=1;
+LAST-UPDATED("Change in Population since previous census (Number)")="20170511 10:06";
+LAST-UPDATED("Births (Number)")="20170511 10:06";
+LAST-UPDATED("Deaths (Number)")="20170511 10:06";
+LAST-UPDATED("Natural increase (Number)")="20170511 10:06";
+LAST-UPDATED("Estimated net migration (Number)")="20170511 10:06";
+LAST-UPDATED("Average annual rates per 1,000 - Births (Number)")="20170511 10:06";
+LAST-UPDATED("Average annual rates per 1,000 - Deaths (Number)")="20170511 10:06";
+LAST-UPDATED("Average annual rates per 1,000 - Natural increase (Number)")="20170511 10:06";
+LAST-UPDATED("Average annual rates per 1,000 - Estimated net migration (Number)")="20170511 10:06";
+UNITS("Change in Population since previous census (Number)")="Number";
+UNITS("Births (Number)")="Number";
+UNITS("Deaths (Number)")="Number";
+UNITS("Natural increase (Number)")="Number";
+UNITS("Estimated net migration (Number)")="Number";
+UNITS("Average annual rates per 1,000 - Births (Number)")="Number";
+UNITS("Average annual rates per 1,000 - Deaths (Number)")="Number";
+UNITS("Average annual rates per 1,000 - Natural increase (Number)")="Number";
+UNITS("Average annual rates per 1,000 - Estimated net migration (Number)")="Number";
+SOURCE="Central Statistics Office, Ireland";
+DATABASE="CSO Databank";
+REFPERIOD("Change in Population since previous census (Number)")=" ";
+REFPERIOD("Births (Number)")=" ";
+REFPERIOD("Deaths (Number)")=" ";
+REFPERIOD("Natural increase (Number)")=" ";
+REFPERIOD("Estimated net migration (Number)")=" ";
+REFPERIOD("Average annual rates per 1,000 - Births (Number)")=" ";
+REFPERIOD("Average annual rates per 1,000 - Deaths (Number)")=" ";
+REFPERIOD("Average annual rates per 1,000 - Natural increase (Number)")=" ";
+REFPERIOD("Average annual rates per 1,000 - Estimated net migration (Number)")=" ";
+BASEPERIOD("Change in Population since previous census (Number)")=" ";
+BASEPERIOD("Births (Number)")=" ";
+BASEPERIOD("Deaths (Number)")=" ";
+BASEPERIOD("Natural increase (Number)")=" ";
+BASEPERIOD("Estimated net migration (Number)")=" ";
+BASEPERIOD("Average annual rates per 1,000 - Births (Number)")=" ";
+BASEPERIOD("Average annual rates per 1,000 - Deaths (Number)")=" ";
+BASEPERIOD("Average annual rates per 1,000 - Natural increase (Number)")=" ";
+BASEPERIOD("Average annual rates per 1,000 - Estimated net migration (Number)")=" ";
+INFOFILE="DB_E2";
+DATA=
+348404.0 367191.0 141079.0 226112.0 122292.0 16.6 6.4 10.2 5.5 173613.0 345706.0 147424.0 198282.0 -24669.0 14.8 6.3 8.5 -1.1 
+4263.0 5010.0 1696.0 3314.0 949.0 19.1 6.5 12.6 3.6 2320.0 4466.0 1859.0 2607.0 -287.0 16.0 6.7 9.3 -1.0 
+21401.0 38367.0 21010.0 17357.0 4044.0 14.8 8.1 6.7 1.6 26942.0 39071.0 20775.0 18296.0 8646.0 14.4 7.7 6.8 3.2 
+12223.0 13690.0 6417.0 7273.0 4950.0 13.7 6.4 7.3 4.9 11757.0 14055.0 7108.0 6947.0 4810.0 13.3 6.7 6.5 4.5 
+33999.0 26940.

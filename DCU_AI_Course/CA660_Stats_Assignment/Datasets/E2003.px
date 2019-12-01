@@ -1,0 +1,42 @@
+CHARSET="ANSI";
+AXIS-VERSION="2000";
+LANGUAGE="en";
+CREATION-DATE="20170511 11:03";
+DECIMALS=1;
+SHOWDECIMALS=0;
+MATRIX="E2003";
+SUBJECT-AREA="";
+SUBJECT-CODE="DB";
+TITLE="Population and Actual and Percentage Change 1926 to 2016 by County,"
+"CensusYear and Statistic";
+CONTENTS="Population and Actual and Percentage Change 1926 to 2016";
+UNITS="Number";
+STUB="County";
+HEADING="CensusYear","Statistic";
+CONTVARIABLE="Statistic";
+VALUES("County")="State","Carlow","Dublin","Kildare","Kilkenny","Laois","Longford","Louth","Meath","Offaly","Westmeath","Wexford",
+"Wicklow","Clare","Cork","Kerry","Limerick","Tipperary","Waterford","Galway","Leitrim","Mayo","Roscommon","Sligo","Cavan",
+"Donegal","Monaghan";
+VALUES("CensusYear")="1926","1936","1946","1951","1956","1961","1966","1971","1979","1981","1986","1991","1996","2002","2006","2011","2016";
+VALUES("Statistic")="Population (Number)","Actual change since previous census (Number)","Percentage change since previous census (%)";
+CODES("County")="-","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26";
+CODES("Statistic")="E2003C01","E2003C02","E2003C03";
+DOMAIN("County")="C02779V03348";
+PRECISION("Statistic","Percentage change since previous census (%)")=1;
+LAST-UPDATED("Population (Number)")="20170511 10:06";
+LAST-UPDATED("Actual change since previous census (Number)")="20170511 10:06";
+LAST-UPDATED("Percentage change since previous census (%)")="20170511 10:06";
+UNITS("Population (Number)")="Number";
+UNITS("Actual change since previous census (Number)")="Number";
+UNITS("Percentage change since previous census (%)")="%";
+SOURCE="Central Statistics Office, Ireland";
+DATABASE="CSO Databank";
+REFPERIOD("Population (Number)")=" ";
+REFPERIOD("Actual change since previous census (Number)")=" ";
+REFPERIOD("Percentage change since previous census (%)")=" ";
+BASEPERIOD("Population (Number)")=" ";
+BASEPERIOD("Actual change since previous census (Number)")=" ";
+BASEPERIOD("Percentage change since previous census (%)")=" ";
+INFOFILE="DB_E2";
+DATA=
+2971992.0 -167696.0 -6.0 2968420.0 -3572.0 -0.1 2955107.0 -13313.0 -0.4 2960593.0 5486.0 0.2 2898264.0 -62329.0 -2.1 2818341.0 -79923.0 -2.8 2884002.0 65661.0 2.3 2978248.0 94246.0 3.3 3368217.0 389969.0 13.1 3443405.0 75188.0 2.2 354
