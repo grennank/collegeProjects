@@ -1,0 +1,43 @@
+
+
+library(pxR)
+
+Ireland_df <- as.data.frame(read.csv("Datasets/WorldBank_IrelandData.csv"))
+plot(Ireland_df)
+
+pop_mod <- lm(Pop~Year, data= Ireland_df)
+
+year <- 2017:2050 
+predictions <- (year * pop_mod$coef[2]) + pop_mod$coef[1]
+
+summary(pop_mod) 
+corr_coeff <- cor(Ireland_df$Year, Ireland_df$Pop, use="complete.obs")  
+
+library(psych)
+
+Ireland.num <- Ireland_df[c("Year", "Pop", "GDP","Life_exp","Consumer_PI", "Fertility_rate_BpW","Mortality_Infant_rate_Dp1000")]
+
+corr.test(Ireland.num,
+          use    = "pairwise",
+          method = "pearson",
+          adjust = "none")
+
+library(PerformanceAnalytics)
+
+chart.Correlation(Ireland.num,
+                  method="pearson",
+                  histogram=TRUE,
+                  pch=16)
+
+
+
+data.frame(year,predictions)
+
+
+pop_mod_2 <- lm(Pop~Year+GDP+GNP, data= Ireland_df)
+
+predictions_2 <- (year * 
+                    pop_mod_2$coef[2]) + pop_mod_2$coef[1]
+
+summary(pop_mod_2) 
+data.frame(year,predictions_2)

@@ -1,14 +1,17 @@
 #setwd("C:/collegeProjects/DCU_AI_Course/CA660_Stats_Assignment")
 # setwd("~/Documents/GitProjects/collegeProjects/DCU_AI_Course/CA660_Stats_Assignment")
-
+#install.packages(c("caTools", "dplyr", "e1071", "ggplot2", "gmodels", "GoodmanKruskal", "pxR", "usethis"))
 install.packages("gmodels")
 install.packages("ggplot2")
 install.packages("GoodmanKruskal")
+install.packages("rlang")
+
 library(pxR)
 library(ggplot2)
 library(dplyr)
 library(gmodels)
 library(GoodmanKruskal)
+update.packages("rlang")
 
 migration <- as.data.frame(read.px("Datasets/PEA03.px"))
 population <- as.data.frame(read.px("Datasets/PEA01.px"))
@@ -164,12 +167,6 @@ train_ind <- sample(seq_len(nrow(population)), size = smp_size)
 train <- population[train_ind, ]
 test <- population[-train_ind, ]
 
-#SVM dataset setup
-rm(SVM_df)
-SVM_df$Sex <- NA
-SVM_df$Duration <- NULL
-SVM_df = data.frame()
-
 # if Number <= 50 Size is small, 
 # if Number is between 50 and 70, Size is Medium
 # if Number is Bigger than 70, Size is Big
@@ -213,20 +210,60 @@ test_set[-3] = scale(test_set[-3])
 install.packages('e1071') 
 library(e1071) 
 
-Sys.setenv('R_MAX_VSIZE'=32000000000)
+Sys.setenv('R_MAX_VSIZE'=320000000000)
 Sys.getenv('R_MAX_VSIZE')
-usethis::edit_r_environ()
+#usethis::edit_r_environ()
 classifier = svm(formula = value ~ ., 
                  data = liv_reg_mod_dur_SVM, 
                  type = 'C-classification', 
                  kernel = 'linear') 
 
+model <- lm(training_set$value~training_set$Age, data = training_set)
+summary(model)
+
+testing <- data.frame(test_set$Age)
+predictions <- predict(model, newdata=testing,interval = "confidence")
 y_pred = predict(classifier, newdata = test_set[-3]) 
 
+p <- ggplot(mydata, aes(speed, dist)) +
+  geom_point() +
+  stat_smooth(method = lm)
 
 
+ggpairs(data=liv_reg_mod_dur_SVM)
+library(GGally)
+
+ggplot(data=training_set, aes(model$residuals)) +
+  geom_histogram(binwidth = 1, color = "black", fill = "purple4") +
+  theme(panel.background = element_rect(fill = "white"),
+        axis.line.x=element_line(),
+        axis.line.y=element_line()) +
+  ggtitle("Histogram for Model Residuals")
+
+ggplot(data = training_set, aes(x = training_set$Age, y = training_set$value)) +
+  geom_point() +
+  stat_smooth(method = "lm", col = "dodgerblue3") +
+  theme(panel.background = element_rect(fill = "white"),
+        axis.line.x=element_line(),
+        axis.line.y=element_line()) +
+  ggtitle("Linear Model Fitted to Data")
 
 
+#Building the model
+set.seed (32323)
 
+trCtrl = trainControl(method = "cv", number = 10)
 
+boostFit = train (Age~value + Dur, trControl = trCtrl,
+                  method = "gbm", data = training_set, verbose = FALSE)
 
+#Checking the accuracy of the model
+confusionMatrix (training_set$Age, predict(boostFit, training_set))
+
+test_set$predicted = predict (boostFit, test_set)
+test_set$residuals = residuals(boostFit, test_set)
+table(test_set$Age, test_set$predicted)
+actuals_preds <- data.frame(cbind(actuals=test_set$Age, predicted=test_set$predicted)) # make actuals_predicteds dataframe.
+correlation_accuracy <- cor(actuals_preds)
+head(actuals_preds)
+plot(test_set$Age, test_set$predicted)

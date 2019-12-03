@@ -1,0 +1,71 @@
+CHARSET="ANSI";
+AXIS-VERSION="2000";
+LANGUAGE="en";
+CREATION-DATE="20170511 11:04";
+DECIMALS=1;
+SHOWDECIMALS=0;
+MATRIX="E2011";
+SUBJECT-AREA="";
+SUBJECT-CODE="DB";
+TITLE="Population Change and Average Annual Rates 2011 to 2016 by Sex, County"
+"and City, CensusYear and Statistic";
+CONTENTS="Population Change and Average Annual Rates 2011 to 2016";
+UNITS="Number";
+STUB="Sex","County and City";
+HEADING="CensusYear","Statistic";
+CONTVARIABLE="Statistic";
+VALUES("Sex")="Both sexes","Male","Female";
+VALUES("County and City")="State","Carlow","Dublin City","Dún Laoghaire-Rathdown","Fingal","South Dublin","Kildare",
+"Kilkenny","Laois","Longford","Louth","Meath","Offaly","Westmeath","Wexford","Wicklow","Clare","Cork City","Cork County",
+"Kerry","Limerick City and County","Tipperary","Waterford City and County","Galway City","Galway County",
+"Leitrim","Mayo","Roscommon","Sligo","Cavan","Donegal","Monaghan";
+VALUES("CensusYear")="2011","2016";
+VALUES("Statistic")="Population (Number)","Births (Number)","Deaths (Number)","Estimated net migration (Number)",
+"Average annual rates per 1,000 of average population - births (Number)","Average annual rates per 1,000 of average population - deaths (Number)",
+"Average annual rates per 1,000 of average population - estimated net migration (Number)";
+CODES("Sex")="-","1","2";
+CODES("County and City")="IE","CW","DC","DR","FL","SD","KE","KK","LS","LD","LH","MH","OY","WH","WX","WW","CE","CC","CK","KY","LK","TY","WD","GC","GY","LM","MO","RN","SO","CN","DL","MN";
+CODES("Statistic")="E2011C01","E2011C02","E2011C03","E2011C04","E2011C05","E2011C06","E2011C07";
+DOMAIN("Sex")="C02199V02655";
+DOMAIN("County and City")="C03367V04052";
+PRECISION("Statistic","Average annual rates per 1,000 of average population - births (Number)")=1;
+PRECISION("Statistic","Average annual rates per 1,000 of average population - deaths (Number)")=1;
+PRECISION("Statistic","Average annual rates per 1,000 of average population - estimated net migration (Number)")=1;
+LAST-UPDATED("Population (Number)")="20170511 10:07";
+LAST-UPDATED("Births (Number)")="20170511 10:07";
+LAST-UPDATED("Deaths (Number)")="20170511 10:07";
+LAST-UPDATED("Estimated net migration (Number)")="20170511 10:07";
+LAST-UPDATED("Average annual rates per 1,000 of average population - births (Number)")="20170511 10:07";
+LAST-UPDATED("Average annual rates per 1,000 of average population - deaths (Number)")="20170511 10:07";
+LAST-UPDATED("Average annual rates per 1,000 of average population - estimated net migration (Number)")="20170511 10:07";
+UNITS("Population (Number)")="Number";
+UNITS("Births (Number)")="Number";
+UNITS("Deaths (Number)")="Number";
+UNITS("Estimated net migration (Number)")="Number";
+UNITS("Average annual rates per 1,000 of average population - births (Number)")="Number";
+UNITS("Average annual rates per 1,000 of average population - deaths (Number)")="Number";
+UNITS("Average annual rates per 1,000 of average population - estimated net migration (Number)")="Number";
+SOURCE="Central Statistics Office, Ireland";
+DATABASE="CSO Databank";
+REFPERIOD("Population (Number)")=" ";
+REFPERIOD("Births (Number)")=" ";
+REFPERIOD("Deaths (Number)")=" ";
+REFPERIOD("Estimated net migration (Number)")=" ";
+REFPERIOD("Average annual rates per 1,000 of average population - births (Number)")=" ";
+REFPERIOD("Average annual rates per 1,000 of average population - deaths (Number)")=" ";
+REFPERIOD("Average annual rates per 1,000 of average population - estimated net migration (Number)")=" ";
+BASEPERIOD("Population (Number)")=" ";
+BASEPERIOD("Births (Number)")=" ";
+BASEPERIOD("Deaths (Number)")=" ";
+BASEPERIOD("Estimated net migration (Number)")=" ";
+BASEPERIOD("Average annual rates per 1,000 of average population - births (Number)")=" ";
+BASEPERIOD("Average annual rates per 1,000 of average population - deaths (Number)")=" ";
+BASEPERIOD("Average annual rates per 1,000 of average population - estimated net migration (Number)")=" ";
+INFOFILE="DB_E2";
+DATA=
+4588252.0 367191.0 141079.0 122292.0 16.6 6.4 5.5 4761865.0 345706.0 147424.0 -24669.0 14.8 6.3 -1.1 
+54612.0 5010.0 1696.0 949.0 19.1 6.5 3.6 56932.0 4466.0 1859.0 -287.0 16.0 6.7 -1.0 
+527612.0 38367.0 21010.0 4044.0 14.8 8.1 1.6 554554.0 39071.0 20775.0 8646.0 14.4 7.7 3.2 
+206261.0 13690.0 6417.0 4950.0 13.7 6.4 4.9 218018.0 14055.0 7108.0 4810.0 13.3 6.7 4.5 
+273991.0 26940.0 4229.0 11288.0 21.0 3.3 8.8 296020.0 26313.0 4965.0 681.0 18.5 3.5 0.5 
+265205.0 23550.0 44
